@@ -7,7 +7,13 @@ import java.util.regex.*;
 public class Solution {
 
     static boolean isPrime (int number) {
-        for( int i = 2; i <= Math.sqrt(number); i++ ) {
+        double sqRoot = Math.sqrt(number);
+        
+        if (number == 1) {
+            return false;
+        }
+        
+        for( int i = 2; i <= sqRoot; i++ ) {
             if ( number % i == 0 ) {
                 return false;
             }            
@@ -31,3 +37,6 @@ public class Solution {
         
     }
 }
+
+
+
